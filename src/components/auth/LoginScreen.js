@@ -18,10 +18,10 @@ export const LoginScreen = () => {
     e.preventDefault()
     dispatch(startLoginEmailPassword(email, password))
   }
+  
   const handleGoogleLogin = () => {
     dispatch(startGoogleLogin())
-  }
-
+}
   return (
     <>
       <h3 className="auth__title">Login</h3>
