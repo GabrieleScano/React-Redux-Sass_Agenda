@@ -1,10 +1,48 @@
-import { types } from '../types/types'
+import { getAuth, signInWithPopup, createUserWithEmailAndPassword } from 'firebase/auth';
+import { googleAuthProvider } from '../firebase/firebase-config';
+import {types} from '../types/types';
+ 
+export const startLoginEmailPassword = (email, password) =>{
+    return (dispatch) =>{
+        setTimeout(() => {
+            dispatch(login(email, password))
+        }, 3500);
+    }
+}
 
+export const startRegisterWithEmailPasswordName = (email, password, name) => {
+    return (dispatch) => {
+        const auth = getAuth()
+        console.log(auth)
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((user) =>{
+                console.log(user)
+                // await user.updateProfile({displayName: name})
+                // dispatch(
+                //     login(user.uid, user.displayName)
+                // )
+            })
+    }
+}
 
-export const login = (uid, displayName) => ({
-  type: types.login,
-  payload: {
-    uid,
-    displayName,
-  }
-});
+export const startGoogleLogin = () =>{
+    return (dispatch) =>{
+        const auth = getAuth()
+        signInWithPopup(auth, googleAuthProvider)
+            .then(({user}) =>{
+                dispatch(
+                    login(user.uid, user.displayName)
+                )
+            })
+    }
+}
+
+export const login = (uid, displayName) =>(
+    {
+        type:types.login,
+        payload: {
+            uid,
+            displayName
+        }
+    }
+)

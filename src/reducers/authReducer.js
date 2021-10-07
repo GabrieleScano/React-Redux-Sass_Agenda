@@ -1,4 +1,4 @@
-import { types } from '../components/types/types'
+import { types } from '../types/types'
 
 const { login, logout } = types
 
