@@ -1,10 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { AgendaApp } from './AgendaApp'
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import { JournalApp } from './JournalApp';
 import './styles/styles.scss'
 
+
+
 ReactDOM.render(
-  <AgendaApp />,
+  <JournalApp />,
   document.getElementById('root')
 );
 

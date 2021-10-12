@@ -1,10 +1,10 @@
 
 
-.agenda__main-content {
+.journal__main-content {
     display: flex;
 }
 
-.agenda__sidebar {
+.journal__sidebar {
     background-color: $dark-grey;
     color: white;
     display: flex;
@@ -15,16 +15,16 @@
     width: 450px;
 }
 
-.agenda__sidebar-navbar {
+.journal__sidebar-navbar {
     display: flex;
     justify-content: space-between;
 }
 
-.agenda__sidebar-navbar h3 {
+.journal__sidebar-navbar h3 {
     font-weight: lighter;
 }
 
-.agenda__new-entry {
+.journal__new-entry {
     align-items: center;
     cursor: pointer;
     display: flex;
@@ -41,41 +41,42 @@
     
 }
 
-.agenda__entries {
+.journal__entries {
     flex: 1 1 auto;
     margin-top: 30px;
     overflow-y: scroll;
 }
 
-.agenda__entry {
+.journal__entry {
     background-color: white;
     border-radius: 4px;
     color: $dark-grey;
     display: flex;
+    justify-content: space-between;
     margin-bottom: 10px;
     overflow: hidden;
 }
 
-.agenda__entry-picture {
+.journal__entry-picture {
     height: 75px;
     width: 75px;
 }
 
 
-.agenda__entry-body {
+.journal__entry-body {
     padding: 10px;
 }
 
-.agenda__entry-title {
+.journal__entry-title {
     font-size: 14px;
     font-weight: bold;
 }
 
-.agenda__entry-content {
+.journal__entry-content {
     font-size: 10px;
 }
 
-.agenda__entry-date-box {
+.journal__entry-date-box {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -83,6 +84,6 @@
     padding: 5px;
 }
 
-.agenda__entry-date-box span{
+.journal__entry-date-box span{
     font-size: 12px;
 }
