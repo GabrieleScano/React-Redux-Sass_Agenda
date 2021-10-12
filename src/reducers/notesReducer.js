@@ -1,16 +1,3 @@
-/*
-    {
-        notes: [],
-        active: null,
-        active: {
-            id: 'KASKLDJALKSDJ129387123',
-            title: '',
-            body: '',
-            imageUrl: '',
-            date: 12387612387126
-        }
-    }
-*/
 
 import { types } from '../types/types';
 

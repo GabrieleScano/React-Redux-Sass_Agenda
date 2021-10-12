@@ -17,7 +17,7 @@ export const startNewNote = () => {
             date: new Date().getTime()
         }
 
-        const doc = await db.collection(`${ uid }/journal/notes`).add( newNote );
+        const doc = await db.collection(`${ uid }/agenda/notes`).add( newNote );
 
         dispatch( activeNote( doc.id, newNote ) );
         dispatch( addNewNote( doc.id, newNote ) );
@@ -69,7 +69,7 @@ export const startSaveNote = ( note ) => {
         const noteToFirestore = { ...note };
         delete noteToFirestore.id;
 
-        await db.doc(`${ uid }/journal/notes/${ note.id }`).update( noteToFirestore );
+        await db.doc(`${ uid }/agenda/notes/${ note.id }`).update( noteToFirestore );
 
         dispatch( refreshNote( note.id, noteToFirestore ) );
         Swal.fire('Saved', note.title, 'success');
@@ -117,7 +117,7 @@ export const startDeleting = ( id ) => {
     return async( dispatch, getState ) => {
          
         const uid = getState().auth.uid;
-        await db.doc(`${ uid }/journal/notes/${ id }`).delete();
+        await db.doc(`${ uid }/agenda/notes/${ id }`).delete();
 
         dispatch( deleteNote(id) );
 

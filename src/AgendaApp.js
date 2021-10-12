@@ -6,7 +6,7 @@ import { AppRouter } from './routers/AppRouter';
 
 
 
-export const JournalApp = () => {
+export const AgendaApp = () => {
     return (
         <Provider store={ store }>
             <AppRouter />

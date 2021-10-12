@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { JournalEntries } from './JournalEntries'
+import { AgendaEntries } from './AgendaEntries'
 import { startLogout } from '../../actions/auth';
 import { startNewNote } from '../../actions/notes';
 
@@ -19,9 +19,9 @@ export const Sidebar = () => {
     }
 
     return (
-        <aside className="journal__sidebar">
+        <aside className="agenda__sidebar">
             
-            <div className="journal__sidebar-navbar">
+            <div className="agenda__sidebar-navbar">
                 <h3 className="mt-5">
                     <i className="far fa-moon"></i>
                     <span> { name }</span>
@@ -36,7 +36,7 @@ export const Sidebar = () => {
             </div>
 
             <div 
-                className="journal__new-entry"
+                className="agenda__new-entry"
                 onClick={ handleAddNew }
             >
                 <i className="far fa-calendar-plus fa-5x"></i>
@@ -45,7 +45,7 @@ export const Sidebar = () => {
                 </p>
             </div>
 
-            <JournalEntries />    
+            <AgendaEntries />    
 
         </aside>
     )
