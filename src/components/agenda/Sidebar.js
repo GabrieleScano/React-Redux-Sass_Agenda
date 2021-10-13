@@ -10,7 +10,7 @@ export const Sidebar = () => {
     const dispatch = useDispatch();
     const { name } = useSelector( state => state.auth );
 
-    const hanleLogout = () => {
+    const handleLogout = () => {
         dispatch( startLogout() )
     }
 
@@ -19,34 +19,35 @@ export const Sidebar = () => {
     }
 
     return (
-        <aside className="agenda__sidebar">
-            
+        <div className="agenda__sidebar">
+
             <div className="agenda__sidebar-navbar">
                 <h3 className="mt-5">
-                    <i className="far fa-moon"></i>
+                    <i className="far fa-user"></i>
                     <span> { name }</span>
                 </h3>
 
                 <button 
-                    className="btn"
-                    onClick={ hanleLogout }
+                    className="btn btn-logout"
+                    onClick={ handleLogout }
                 >
                     Logout
                 </button>
             </div>
+            <AgendaEntries />  
 
-            <div 
-                className="agenda__new-entry"
+            <button 
+                className=" btn agenda__new-entry"
                 onClick={ handleAddNew }
             >
-                <i className="far fa-calendar-plus fa-5x"></i>
-                <p className="mt-5">
+                <i className="fas fa-plus fa-2x"></i>
+                <p>
                     New entry
                 </p>
-            </div>
+            </button>
 
-            <AgendaEntries />    
+          
 
-        </aside>
+        </div>
     )
 }

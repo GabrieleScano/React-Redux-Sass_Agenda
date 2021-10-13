@@ -10,7 +10,7 @@
     color: white;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    // height: 100vh;
     padding-left: 10px;
     padding-right: 10px;
     // width: 450px;
@@ -26,15 +26,23 @@
 }
 
 .agenda__new-entry {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 30px;
-    width: 100%;
+    // align-items: center;
+    // cursor: pointer;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    // margin-top: 30px;
+    // width: 100%;
+    background-color: #0066ff;
+    height: 50px;
+    border-radius: 25px;
+    width: 50px;
+    padding: 4px;
+    // position: fixed;
 
-    transition: color .3s ease;
+    // transition: color .3s ease;
+    background-color: rgb(0, 102, 255);
+   
 
     &:hover {
         color: darken($color: white, $amount: 20);
@@ -54,6 +62,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    // margin-right: 14px;
     overflow: hidden;
 }
 
@@ -86,4 +95,8 @@
 
 .agenda__entry-date-box span{
     font-size: 12px;
+}
+
+.fa-user-ninja {
+    color: rgb(250, 237, 237);
 }
