@@ -1,7 +1,7 @@
 
 .auth__main {
     align-items: center;
-    background-color: $primary;
+    background-color: $dark-grey;
     display: flex;
     justify-content: center;
     margin: 0px;
@@ -19,7 +19,7 @@
 
 
 .auth__title {
-    color: darken($color: $primary, $amount: 20);
+    color: darken($color: $dark-grey, $amount: 20);
     margin-bottom: 20px;
 }
 

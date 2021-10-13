@@ -21,15 +21,15 @@
 
 
 .btn-primary {
-    background-color: $primary;
+    background-color: $dark-grey;
     border-radius: 2px;
     
     &:disabled {
-        background-color: lighten($color: $primary, $amount: 15);
+        background-color: lighten($color: $dark-grey, $amount: 15);
     }
 
     &:hover { 
-        background-color: darken($color: $primary, $amount: 15);
+        background-color: darken($color: $dark-grey, $amount: 15);
     }
 }
 
