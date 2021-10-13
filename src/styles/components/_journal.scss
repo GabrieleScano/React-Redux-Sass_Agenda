@@ -2,6 +2,7 @@
 
 .agenda__main-content {
     display: flex;
+    flex-direction: column;
 }
 
 .agenda__sidebar {
@@ -12,7 +13,7 @@
     height: 100vh;
     padding-left: 10px;
     padding-right: 10px;
-    width: 450px;
+    // width: 450px;
 }
 
 .agenda__sidebar-navbar {
@@ -44,7 +45,6 @@
 .agenda__entries {
     flex: 1 1 auto;
     margin-top: 30px;
-    overflow-y: scroll;
 }
 
 .agenda__entry {

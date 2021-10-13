@@ -13,10 +13,10 @@ export const RegisterScreen = () => {
     const { msgError } = useSelector( state => state.ui );
 
     const [ formValues, handleInputChange ] = useForm({
-        name: 'Mia',
-        email: 'd@prova.com',
-        password: '123456',
-        password2: '123456',
+        name: '',
+        email: '',
+        password: '',
+        password2: '',
     });
 
     const { name ,email ,password ,password2 } = formValues;
@@ -49,7 +49,7 @@ export const RegisterScreen = () => {
 
     return (
         <>
-            <h3 className="auth__title">Register</h3>
+            <h3 className="auth__title">Sign up</h3>
 
             <form 
                 onSubmit={ handleRegister }
@@ -109,7 +109,7 @@ export const RegisterScreen = () => {
                     type="submit"
                     className="btn btn-primary btn-block mb-5"
                 >
-                    Register
+                   Create an account
                 </button>
 
                
