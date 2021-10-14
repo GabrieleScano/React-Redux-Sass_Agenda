@@ -43,7 +43,7 @@ export const NoteScreen = () => {
 
     return (
       <div className="notes__main-content">
-        <span className="noteDate">{navDate.format("DD MMMM YYYY")}</span>
+        <span className="note-date">{navDate.format("DD MMMM YYYY")}</span>
 
         <div className="notes__content">
         <span className="uploadImage m-0" onClick={handlePictureClick}>

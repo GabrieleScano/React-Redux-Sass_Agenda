@@ -23,13 +23,13 @@
 .auth__title {
     color: darken($color: $dark-grey, $amount: 20);
     margin-bottom: 10px;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     line-height: 1.25;
     font-weight: 600;
 }
 
 .auth__subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.42857;
     font-weight: 400;
 }
@@ -40,14 +40,15 @@
 .auth__input {
     color: $dark-grey;
     border: 0px;
-    border-bottom: 1px solid $light-grey;
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    height: 20px;
+    border-bottom: 1px solid #d8d8d8;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    height: 15px;
     width: 100%;
     font-weight: 400;
     z-index: 1;
     padding: 16px 0px 10px;
+    transition: border-bottom .3s ease;
 
     transition: border-bottom .3s ease;
     

@@ -37,7 +37,7 @@
     height: 50px;
     border-radius: 25px;
     width: 50px;
-    padding: 3px;
+    padding: 6px;
     position: fixed;
     bottom: 5%;
     left: 75%;
@@ -59,6 +59,8 @@
 
 .agenda__entry {
     background-color: white;
+    box-shadow: 0 5px 11px $light-grey;
+
     /* border-radius: 4px; */
     color: #363636;
     display: flex;
@@ -66,7 +68,7 @@
     margin-bottom: 1px;
     overflow: hidden;
     height: 80px;
-    font-size: 1.4rem;
+    font-size: 1rem;
 }
 
 .agenda__entry-picture {
@@ -95,7 +97,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5px;
+    padding: 0px 10px 10px 0;
 }
 
 .agenda__entry-date-box span{
@@ -112,10 +114,9 @@
     justify-content: space-between;
 }
 
-.noteDate {
-    background-color: $dark-grey;
+.note-date {
     padding: 5px 5px 5px 15px;
-    color: rgb(250, 237, 237);
+    color: $light-grey;
 }
 
 .uploadImage {
@@ -124,4 +125,11 @@
     width: 80px;
     height: 40px;
     padding-left: 15px;
+}
+
+.agenda__suggest {
+    color: black;
+    padding-left: 10px;
+    position: absolute;
+    top:100px;
 }

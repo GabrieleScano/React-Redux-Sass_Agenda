@@ -14,10 +14,9 @@ export const NothingSelected = () => {
 
     return (
         <div className="nothing__main-content">
-            <div className="noteList">
+            <div className="notes__list">
 
-            <h2>
-
+            <h2 className="agenda__suggest">
                 Create an entry!
             </h2>
          <Sidebar />
