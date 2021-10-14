@@ -3,6 +3,7 @@ import { Sidebar } from './Sidebar';
 import { NoteScreen } from '../notes/NoteScreen';
 import { NothingSelected } from './NothingSelected';
 import { useSelector } from 'react-redux';
+import { Navbar } from './Navbar';
 
 
 export const AgendaScreen = () => {
@@ -14,20 +15,19 @@ export const AgendaScreen = () => {
         <div 
             className="agenda__main-content animate__animated animate__fadeIn animate__faster"
         >
-            
-            <Sidebar />
-
+         <Navbar />
 
             <main>
 
                 {
                     ( active ) 
-                        ? ( <NoteScreen /> )
-                        : ( <NothingSelected /> )
+                    ? ( <NoteScreen /> )
+                    : ( <NothingSelected />)
                 }
-
+ 
             </main>
 
+        {/* <Sidebar /> */}
 
         </div>
     )

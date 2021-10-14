@@ -33,19 +33,21 @@
     // justify-content: center;
     // margin-top: 30px;
     // width: 100%;
-    background-color: #0066ff;
+    background-color: #0066ffd3;
     height: 50px;
     border-radius: 25px;
     width: 50px;
-    padding: 4px;
-    // position: fixed;
+    padding: 3px;
+    position: fixed;
+    bottom: 5%;
+    left: 75%;
 
     // transition: color .3s ease;
-    background-color: rgb(0, 102, 255);
+    // background-color: rgba(0, 102, 255, 0.322);
    
 
     &:hover {
-        color: darken($color: white, $amount: 20);
+        color: darken($color: rgb(4, 253, 253), $amount: 20);
     }
     
 }
@@ -61,7 +63,7 @@
     color: $dark-grey;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     // margin-right: 14px;
     overflow: hidden;
 }
@@ -99,4 +101,24 @@
 
 .fa-user-ninja {
     color: rgb(250, 237, 237);
+}
+
+.colElements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.noteDate {
+    background-color: $dark-grey;
+    padding: 5px 5px 5px 15px;
+    color: rgb(250, 237, 237);
+}
+
+.uploadImage {
+    cursor: pointer;
+    align-self: flex-end;
+    width: 80px;
+    height: 40px;
+    padding-left: 15px;
 }

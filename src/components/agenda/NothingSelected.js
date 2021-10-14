@@ -1,15 +1,37 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { startNewNote } from '../../actions/notes'
+import { Sidebar } from './Sidebar';
+
 
 export const NothingSelected = () => {
+
+    const dispatch = useDispatch();
+    const handleAddNew = () => {
+        dispatch( startNewNote() );
+    }
+
+
     return (
         <div className="nothing__main-content">
-            <p>
-                Select something
-                <br />
-                pr create an entry!
-            </p>
+            <div className="noteList">
 
-            <i className="far fa-star fa-4x mt-5"></i>
+            <h2>
+
+                Create an entry!
+            </h2>
+         <Sidebar />
+            </div>
+
+            <button 
+                className=" btn agenda__new-entry"
+                onClick={ handleAddNew }
+            >
+                <i className="fas fa-plus fa-2x"></i>
+                {/* <p>
+                    New entry
+                </p> */} 
+            </button>
 
         </div>
     )

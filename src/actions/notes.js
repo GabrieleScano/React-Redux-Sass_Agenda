@@ -5,7 +5,6 @@ import { types } from '../types/types';
 import { loadNotes } from '../helpers/loadNotes';
 import { fileUpload } from '../helpers/fileUpload';
 
-
 export const startNewNote = () => {
     return async( dispatch, getState ) => {
 

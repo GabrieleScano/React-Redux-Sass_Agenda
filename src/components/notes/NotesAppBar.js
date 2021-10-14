@@ -1,21 +1,27 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { startSaveNote, startUploading } from '../../actions/notes';
-import moment from 'moment';
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { startDeleting } from '../../actions/notes'
+import { startSaveNote, startUploading } from '../../actions/notes'
+import { useForm } from '../../hooks/useForm'
 
 export const NotesAppBar = () => {
 
     const dispatch = useDispatch();
     const { active } = useSelector( state => state.notes );
-    const navDate = moment(active.date)
+    const { active:note } = useSelector( state => state.notes );
 
+    const [ formValues ] = useForm( note );
+    const { id } = formValues;
+
+    
+    
     const handleSave = () => {
         dispatch( startSaveNote( active ) );
     }
 
-    const handlePictureClick = () => {
-        document.querySelector('#fileSelector').click();
-    }
+    // const handlePictureClick = () => {
+    //     document.querySelector('#fileSelector').click();
+    // }
     
     const handleFileChange = (e) => {
         const file = e.target.files[0];
@@ -24,9 +30,19 @@ export const NotesAppBar = () => {
         }
     }
 
+    const handleDelete = () => {
+        dispatch( startDeleting( id ) );
+    }
+
     return (
+        <>
+                {/* <button 
+                    className="btn btn-primary m-0"
+                    onClick={ handlePictureClick }
+                >
+                    Picture
+                </button> */}
         <div className="notes__appbar">
-            <span>{navDate.format('DD MMMM YYYY')}</span>
 
             <input 
                 id="fileSelector"
@@ -36,21 +52,22 @@ export const NotesAppBar = () => {
                 onChange={ handleFileChange }
             />
 
-            <div>
+        </div>
+            <div className="colElements">
                 <button 
-                    className="btn"
-                    onClick={ handlePictureClick }
-                >
-                    Picture
-                </button>
-
+                className="btn btn-danger m-0"
+                onClick={ handleDelete }
+            >
+                Delete
+            </button>
                 <button 
-                    className="btn"
+                    className="btn btn-primary btn-save m-0"
                     onClick={ handleSave }
                 >
                     Save
                 </button>
+
             </div>
-        </div>
+        </>
     )
 }
