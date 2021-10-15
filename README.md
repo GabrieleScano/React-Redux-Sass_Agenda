@@ -1,3 +1,12 @@
+# Notes app created with React
+## State management: Redux
+
+## Routes: React Router
+
+## Style: SASS
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
