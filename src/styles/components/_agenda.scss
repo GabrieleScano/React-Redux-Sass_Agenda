@@ -1,19 +1,14 @@
-
-
 .agenda__main-content {
     display: flex;
     flex-direction: column;
 }
 
 .agenda__sidebar {
-    // background-color: $dark-grey;
     color: white;
     display: flex;
     flex-direction: column;
-    // height: 100vh;
     padding-left: 10px;
     padding-right: 10px;
-    // width: 450px;
 }
 
 .agenda__sidebar-navbar {
@@ -26,13 +21,6 @@
 }
 
 .agenda__new-entry {
-    // align-items: center;
-    // cursor: pointer;
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: center;
-    // margin-top: 30px;
-    // width: 100%;
     background-color: #0066ffd3;
     height: 50px;
     border-radius: 25px;
@@ -42,14 +30,9 @@
     bottom: 5%;
     left: 75%;
 
-    // transition: color .3s ease;
-    // background-color: rgba(0, 102, 255, 0.322);
-   
-
     &:hover {
         color: darken($color: rgb(4, 253, 253), $amount: 20);
-    }
-    
+    } 
 }
 
 .agenda__entries {
@@ -70,8 +53,6 @@
     height: 80px;
     font-size: 1rem;
 }
-
-
 
 .agenda__entry-body {
     padding: 20px 0px 0px 12px;
@@ -128,6 +109,5 @@
     padding-left: 10px;
     position: absolute;
     top: 100px;
-    left: 10px;
-
+    left: 5px;
 }
