@@ -10,9 +10,11 @@ export const Navbar = () => {
         dispatch( startLogout() )
     }
     return (
-        <div className="agenda__sidebar-navbar">
-        <h3 className="mt-10 ml-15">
-            <i className="far fa-user"></i>
+        <div className="agenda__bar-navbar">
+        <h3 className="name-container mt-10 ml-15">
+            <div className="green-cube"></div>
+            <div className="green-cube-medium"></div>
+            <div className="green-cube-small"></div>
             <span> { name }</span>
         </h3>
 

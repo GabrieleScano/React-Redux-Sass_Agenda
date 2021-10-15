@@ -2,10 +2,10 @@ import React from 'react'
 import { AgendaEntries } from './AgendaEntries'
 
 
-export const Sidebar = () => {
+export const Bar = () => {
 
     return (
-        <div className="agenda__sidebar">
+        <div className="agenda__bar">
             <AgendaEntries />  
         </div>
     )

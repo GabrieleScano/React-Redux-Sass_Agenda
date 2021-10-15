@@ -26,7 +26,7 @@ export const AgendaScreen = () => {
  
             </main>
 
-        {/* <Sidebar /> */}
+        {/* <Bar /> */}
 
         </div>
     )

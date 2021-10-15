@@ -38,11 +38,11 @@
     width: 50%;
     background-color: unset;
     transition: background-color .3s ease;
-    border-bottom: 2px solid rgb(236, 77, 77);
-
+    
     &:hover {
+        border-bottom: 2px solid rgb(236, 77, 77);
         color: white;
-        background-color: lighten($color: rgba(246, 12, 12, 0.685), $amount: 40);
+        color: darken($color: rgba(246, 12, 12, 0.685), $amount: 40);
     }
 }
 
@@ -62,12 +62,13 @@
 
 .btn-save {
     color: $primary;
-    background-color: unset;
+    background-color: white !important;
     width: 50%;
-    border-bottom: 2px solid $primary;
+    transition: background-color .3s ease;
     &:hover {
+        border-bottom: 2px solid $primary;
         color: white;
-        background-color: lighten($color: $primary, $amount: 40);
+        color: darken($color: $primary, $amount: 40) !important;
     }
 }
 
@@ -78,7 +79,7 @@
     height: 42px;
     background-color: $white;
     border-radius: 2px;
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 10px 30px $light-shadow;
     transition: box-shadow .3s ease;
 
     .google-icon-wrapper {

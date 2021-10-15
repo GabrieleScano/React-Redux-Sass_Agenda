@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { startNewNote } from '../../actions/notes'
-import { Sidebar } from './Sidebar';
+import { Bar } from './Bar';
 
 
 export const NothingSelected = () => {
@@ -19,7 +19,7 @@ export const NothingSelected = () => {
             <h2 className="agenda__suggest">
                 Create an entry!
             </h2>
-         <Sidebar />
+         <Bar />
             </div>
 
             <button 
