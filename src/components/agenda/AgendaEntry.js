@@ -22,17 +22,6 @@ export const AgendaEntry = ({ id, date, title, body, url }) => {
             onClick={ handleEntryClick }
         >
             
-            {
-                url &&
-                <div 
-                    className="agenda__entry-picture"
-                    style={{
-                        backgroundSize: 'cover',
-                        backgroundImage: `url(${ url })`
-                    }}
-                ></div>
-            }
-
             <div className="agenda__entry-body">
                 <p className="agenda__entry-title">
                     { title }

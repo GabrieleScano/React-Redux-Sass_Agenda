@@ -37,22 +37,16 @@ export const NoteScreen = () => {
 
     }, [formValues, dispatch])
 
-    const handlePictureClick = () => {
-        document.querySelector('#fileSelector').click();
-    }
 
     return (
       <div className="notes__main-content">
         <span className="note-date">{navDate.format("DD MMMM YYYY")}</span>
 
         <div className="notes__content">
-        <span className="uploadImage m-0" onClick={handlePictureClick}>
-          <i className="far fa-image mr-5"></i> 
-          Picture
-        </span>
+
           <input
             type="text"
-            placeholder="Some awesome title"
+            placeholder="Title"
             className="notes__title-input"
             autoComplete="off"
             name="title"
@@ -61,18 +55,12 @@ export const NoteScreen = () => {
           />
 
           <textarea
-            placeholder="What happened today"
+            placeholder="Write here your notes!"
             className="notes__textarea"
             name="body"
             value={body}
             onChange={handleInputChange}
           ></textarea>
-
-          {note.url && (
-            <div className="notes__image">
-              <img src={note.url} alt="imagen" />
-            </div>
-          )}
         </div>
 
         <NotesAppBar />
