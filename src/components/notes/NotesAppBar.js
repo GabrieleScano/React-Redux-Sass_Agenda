@@ -29,7 +29,7 @@ export const NotesAppBar = () => {
         <div className="notes__appbar">
 
         </div>
-            <div className="colElements">
+            <div className="col-elements">
                 <button 
                 className="btn btn-danger m-0"
                 onClick={ handleDelete }
