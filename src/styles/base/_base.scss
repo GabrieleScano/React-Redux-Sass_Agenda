@@ -46,3 +46,23 @@ main {
 .pointer {
     cursor: pointer;
 }
+
+@media (min-width: 950px) {
+    .agenda__sidebar, .agenda__suggest, .agenda__sidebar-navbar, .note-date, .notes__content, .col-elements {
+        margin: 0 300px 0 300px;
+    }
+
+    .btn.agenda__new-entry {
+        left: 50%;
+        bottom: 20%;
+    }
+    .col-elements{
+        padding-bottom: 60px;
+    } 
+  }
+
+  @media (max-width: 500px) {
+    .auth__box-container {
+        box-shadow: none !important;
+    }
+  }

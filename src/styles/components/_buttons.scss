@@ -38,7 +38,7 @@
     width: 50%;
     background-color: unset;
     transition: background-color .3s ease;
-    border-bottom: 1px solid rgb(236, 77, 77);
+    border-bottom: 2px solid rgb(236, 77, 77);
 
     &:hover {
         color: white;
@@ -64,7 +64,7 @@
     color: $primary;
     background-color: unset;
     width: 50%;
-    border-bottom: 1px solid $primary;
+    border-bottom: 2px solid $primary;
     &:hover {
         color: white;
         background-color: lighten($color: $primary, $amount: 40);

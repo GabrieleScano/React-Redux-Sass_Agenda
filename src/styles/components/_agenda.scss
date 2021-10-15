@@ -21,7 +21,7 @@
 }
 
 .agenda__new-entry {
-    background-color: #0066ffd3;
+    background-color: $primary;
     height: 50px;
     border-radius: 25px;
     width: 50px;
@@ -31,7 +31,7 @@
     left: 75%;
 
     &:hover {
-        color: darken($color: rgb(4, 253, 253), $amount: 20);
+        background-color: darken($color: $primary, $amount: 20);
     } 
 }
 
@@ -85,7 +85,7 @@
     color: rgb(250, 237, 237);
 }
 
-.colElements {
+.col-elements {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
