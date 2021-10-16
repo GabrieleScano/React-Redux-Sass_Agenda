@@ -28,42 +28,46 @@
 .green-cube {
     width: 20px;
     height: 20px;
-    background: $primary;
-    background: radial-gradient(circle, rgba(82,146,125,1) 0%, rgba(255,255,255,1) 76%, rgba(73,146,116,1) 90%, rgba(65,146,108,1) 100%);    border-radius: 50px;
     margin-top: 3px;
+    margin-left: 2px;
 }
 
 .green-cube-medium {
     width: 15px;
     height: 15px;
-    background: $primary;
-    background: radial-gradient(circle, rgba(82,146,125,1) 0%, rgba(255,255,255,1) 76%, rgba(73,146,116,1) 90%, rgba(65,146,108,1) 100%);
-    border-radius: 50px;
     margin-top: 3px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .green-cube-small {
     width: 10px;
     height: 10px;
-    background: $primary;
-    background: radial-gradient(circle, rgba(82,146,125,1) 0%, rgba(255,255,255,1) 76%, rgba(73,146,116,1) 90%, rgba(65,146,108,1) 100%);    border-radius: 50px;
-    margin-right: 5px;
     margin-top: 3px;
 }
 
 .agenda__new-entry {
-    background-color: $primary;
+    background-color: $white;
     height: 50px;
     border-radius: 25px;
+    border: 1px solid $white;
     width: 50px;
-    padding: 6px;
+    padding: 4px;
     position: fixed;
     bottom: 5%;
-    left: 75%;
+    left: 65%;
 
     &:hover {
-        background-color: darken($color: $primary, $amount: 20);
+        background-color: darken($color: $primary, $amount: 33);
     } 
+    
+    i {
+        color: $white;
+        &:hover {
+            color: $light-shadow;
+        }
+        
+    }
 }
 
 .agenda__entries {

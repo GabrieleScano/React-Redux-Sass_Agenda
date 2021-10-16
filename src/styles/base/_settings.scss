@@ -2,13 +2,18 @@
 // Colors
 // $primary: #52927d;
 $primary: #3d94839a;
-$primary-background:#ffffff83;
+$primary-background:#ffffffd0;
 $dark-grey: #363636;
 $light-grey: #d8d8d8;
+$light-cloud: #d8d8d882;
 $light-shadow:#e7f0ed;
 
 $white: #fff;
 
 $button-active-blue: #21609b3a;
 
-
+.color-hippie {
+    border-radius: 50%;
+    background: #C6FFDD;  /* fallback for old browsers */
+    background: radial-gradient(circle, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

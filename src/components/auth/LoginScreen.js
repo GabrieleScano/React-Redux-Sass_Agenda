@@ -31,11 +31,9 @@ export const LoginScreen = () => {
         <>
             <h3 className="auth__title">Sign in</h3>
             <div className="auth__title_container">
-            <p className="auth__subtitle">Create your personal agenda</p>
+            <p className="auth__subtitle ">Create your personal <strong>SunNote</strong></p>        
+            <div className="green-cube color-hippie"></div>
 
-            <div className="green-cube"></div>
-            <div className="green-cube-medium"></div>
-            <div className="green-cube-small"></div>
         </div>
 
             <form 

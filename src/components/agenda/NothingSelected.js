@@ -23,13 +23,10 @@ export const NothingSelected = () => {
             </div>
 
             <button 
-                className=" btn agenda__new-entry"
+                className="btn agenda__new-entry color-hippie"
                 onClick={ handleAddNew }
             >
                 <i className="fas fa-plus fa-2x"></i>
-                {/* <p>
-                    New entry
-                </p> */} 
             </button>
 
         </div>

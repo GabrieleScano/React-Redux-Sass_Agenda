@@ -12,12 +12,9 @@ export const Navbar = () => {
     return (
         <div className="agenda__bar-navbar">
         <h3 className="name-container mt-10 ml-15">
-            <div className="green-cube"></div>
-            <div className="green-cube-medium"></div>
-            <div className="green-cube-small"></div>
+            <div className="green-cube color-hippie"></div>
             <span> { name }</span>
         </h3>
-
         <button 
             className="btn btn-logout"
             onClick={ handleLogout }

@@ -53,7 +53,7 @@ main {
     }
 
     .btn.agenda__new-entry {
-        left: 50%;
+        left: 48%;
         bottom: 20%;
     }
     .col-elements{
@@ -61,7 +61,7 @@ main {
     } 
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 900px) {
     .auth__box-container {
         box-shadow: none !important;
     }

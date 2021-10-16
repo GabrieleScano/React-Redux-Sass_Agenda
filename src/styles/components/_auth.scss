@@ -29,7 +29,13 @@
     font-size: 1.1rem;
     line-height: 1.42857;
     font-weight: 400;
-    margin-right: 10px;
+    margin-right: 3px;
+    margin-left: 3px;
+
+    strong {
+        font-size: 20px;
+     }
+
 }
 
 .formBox {
@@ -45,8 +51,10 @@
     width: 100%;
     font-weight: 400;
     z-index: 1;
-    padding: 16px 0px 10px;
+    padding: 16px 0px 15px 10px;
     transition: border-bottom .3s ease;
+    background-color: rgba(255, 255, 255, 0.728);
+
     
     
     &:focus {

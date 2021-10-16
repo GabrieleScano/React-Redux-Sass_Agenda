@@ -1,6 +1,6 @@
 
 .btn {
-    border: none;
+    border: transparent;
     color: white;
     cursor: pointer;
     font-size: 12px;
@@ -19,9 +19,8 @@
     
 }
 
-
 .btn-primary {
-    background-color: $primary;
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 2px;
     
     &:disabled {
@@ -34,13 +33,12 @@
 }
 
 .btn-danger {
-    color: rgb(236, 77, 77);
+    color: #eb4f55;
     width: 50%;
-    background-color: unset;
+    border: 1px solid #f7797d !important;
     transition: background-color .3s ease;
-    
+    background-color: $white;
     &:hover {
-        border-bottom: 2px solid rgb(236, 77, 77);
         color: white;
         color: darken($color: rgba(246, 12, 12, 0.685), $amount: 40);
     }
@@ -61,14 +59,13 @@
 }
 
 .btn-save {
-    color: $primary;
-    background-color: white !important;
+    color: $white;
+    background-color: $white !important;
     width: 50%;
     transition: background-color .3s ease;
+
     &:hover {
-        border-bottom: 2px solid $primary;
-        color: white;
-        color: darken($color: $primary, $amount: 40) !important;
+        background-color: $primary !important;
     }
 }
 
