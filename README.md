@@ -1,9 +1,9 @@
 # Notes app created with React
-## State management: Redux
+State management: Redux
 
-## Routes: React Router
+Routes: React Router
 
-## Style: SASS
+Style: SASS
 
 
 
