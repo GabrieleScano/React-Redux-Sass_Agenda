@@ -12,7 +12,7 @@ export const Navbar = () => {
     return (
         <div className="agenda__bar-navbar">
         <h3 className="name-container mt-10 ml-15">
-            <div className="green-cube color-hippie"></div>
+            <div className="sun-circle color-hippie"></div>
             <span> { name }</span>
         </h3>
         <button 

@@ -20,32 +20,42 @@
 }
 
 .btn-primary {
-    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 2px;
     
     &:disabled {
         background-color: lighten($color: $primary, $amount: 15);
     }
 
-    &:hover { 
-        background-color: darken($color: $primary, $amount: 15);
-    }
+    // &:hover { 
+    //     background-color: darken($color: $primary, $amount: 15);
+    // }
 }
 
 .btn-danger {
     color: #eb4f55;
     width: 50%;
+    border-radius: 0%;
     border: 1px solid #f7797d !important;
     transition: background-color .3s ease;
     background-color: $white;
     &:hover {
+        background-color: #f7797d;
         color: white;
-        color: darken($color: rgba(246, 12, 12, 0.685), $amount: 40);
     }
 }
 
 .btn-block {
+    border-radius: 0%;
     width: 100%;
+    border: none !important;
+    background: linear-gradient(to right, #f7797deb, #fbd886de, #c6ffdddd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: $white;
+    &:hover {
+        
+        background: linear-gradient(to right, #f5f5f535, #c6ffdd, #fafafa23 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: #000000;
+    }
+    
 }
 .auth__google_subtitle {
     margin-bottom: 20px;
@@ -59,13 +69,20 @@
 }
 
 .btn-save {
-    color: $white;
     background-color: $white !important;
+    border-radius: 0%;
+    border: 1px solid #12d16556 !important;
+    color: $dark-grey;
     width: 50%;
     transition: background-color .3s ease;
-
+    font-weight: normal;
+    
+    
     &:hover {
-        background-color: $primary !important;
+        background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: $white;
+        font-weight: bold;
+        border: none !important;
     }
 }
 
