@@ -1,10 +1,14 @@
 # Notes app created with React
+
+Personal agenda fully responsive remote first TRY the [DEMO](https://pacific-woodland-29887.herokuapp.com/auth/login)
+
 State management: Redux
 
 Routes: React Router
 
 Style: SASS
 
+Service and dataBase: Firebase with Firestone
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
