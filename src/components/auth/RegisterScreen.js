@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useDispatch, useSelector} from 'react-redux';
-import validator from 'validator';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { useDispatch, useSelector} from 'react-redux'
+import validator from 'validator'
 
-import { useForm } from '../../hooks/useForm';
-import { setError, removeError } from '../../actions/ui';
-import { startRegisterWithEmailPasswordName } from '../../actions/auth';
+import { useForm } from '../../hooks/useForm'
+import { setError, removeError } from '../../actions/ui'
+import { startRegisterWithEmailPasswordName } from '../../actions/auth'
 
 export const RegisterScreen = () => {
 
@@ -17,15 +17,15 @@ export const RegisterScreen = () => {
         email: '',
         password: '',
         password2: '',
-    });
+    })
 
-    const { name ,email ,password ,password2 } = formValues;
+    const { name ,email ,password ,password2 } = formValues
 
     const handleRegister = (e) => {
-        e.preventDefault();
+        e.preventDefault()
 
         if ( isFormValid() ) {
-            dispatch( startRegisterWithEmailPasswordName(email, password, name) );
+            dispatch(startRegisterWithEmailPasswordName(email, password, name))
         }
 
     }
@@ -55,7 +55,6 @@ export const RegisterScreen = () => {
                 onSubmit={ handleRegister }
                 className="animate__animated animate__fadeIn animate__faster"
             >
-
                 {
                     msgError &&
                     (
@@ -64,7 +63,6 @@ export const RegisterScreen = () => {
                         </div>
                     )
                 }
-
 
                 <input 
                     type="text"
@@ -103,7 +101,6 @@ export const RegisterScreen = () => {
                     value={ password2 }
                     onChange={ handleInputChange }
                 />
-
 
                 <button
                     type="submit"

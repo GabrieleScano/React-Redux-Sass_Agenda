@@ -7,27 +7,23 @@ import { useForm } from '../../hooks/useForm'
 export const NotesAppBar = () => {
 
     const dispatch = useDispatch();
-    const { active } = useSelector( state => state.notes );
-    const { active:note } = useSelector( state => state.notes );
+    const { active } = useSelector( state => state.notes )
+    const { active:note } = useSelector( state => state.notes )
 
-    const [ formValues ] = useForm( note );
-    const { id } = formValues;
+    const [ formValues ] = useForm( note )
+    const { id } = formValues
 
-    
-    
     const handleSave = () => {
-        dispatch( startSaveNote( active ) );
+        dispatch( startSaveNote( active ) )
     }
 
     const handleDelete = () => {
-        dispatch( startDeleting( id ) );
+        dispatch( startDeleting( id ) )
     }
 
     return (
         <>
- 
         <div className="notes__appbar">
-
         </div>
             <div className="col-elements">
                 <button 
@@ -42,7 +38,6 @@ export const NotesAppBar = () => {
                 >
                     Save
                 </button>
-
             </div>
         </>
     )

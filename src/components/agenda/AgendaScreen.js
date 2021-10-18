@@ -1,14 +1,13 @@
-import React from 'react';
-import { NoteScreen } from '../notes/NoteScreen';
-import { NothingSelected } from './NothingSelected';
-import { useSelector } from 'react-redux';
-import { Navbar } from './Navbar';
+import React from 'react'
+import { NoteScreen } from '../notes/NoteScreen'
+import { NothingSelected } from './NothingSelected'
+import { useSelector } from 'react-redux'
+import { Navbar } from './Navbar'
 
 
 export const AgendaScreen = () => {
 
-    const { active } = useSelector( state => state.notes );
-
+    const { active } = useSelector( state => state.notes )
 
     return (
         <div 
@@ -17,17 +16,12 @@ export const AgendaScreen = () => {
          <Navbar />
 
             <main>
-
                 {
                     ( active ) 
                     ? ( <NoteScreen /> )
                     : ( <NothingSelected />)
                 }
- 
             </main>
-
-        {/* <Bar /> */}
-
         </div>
     )
 }

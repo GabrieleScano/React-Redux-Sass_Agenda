@@ -1,49 +1,42 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import {
     BrowserRouter as Router,
     Switch,
     Redirect
-  } from 'react-router-dom';
+  } from 'react-router-dom'
 
-import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux'
 
 import { firebase } from '../firebase/firebase-config'
-import { AuthRouter } from './AuthRouter';
-import { PrivateRoute } from './PrivateRoute';
+import { AuthRouter } from './AuthRouter'
+import { PrivateRoute } from './PrivateRoute'
 
-import { AgendaScreen } from '../components/agenda/AgendaScreen';
-import { login } from '../actions/auth';
-import { PublicRoute } from './PublicRoute';
-import { startLoadingNotes } from '../actions/notes';
+import { AgendaScreen } from '../components/agenda/AgendaScreen'
+import { login } from '../actions/auth'
+import { PublicRoute } from './PublicRoute'
+import { startLoadingNotes } from '../actions/notes'
 
 export const AppRouter = () => {
 
-    const dispatch = useDispatch();
-
-    const [ checking, setChecking ] = useState(true);
-    const [ isLoggedIn, setIsLoggedIn ] = useState(false);
-
-
+    const dispatch = useDispatch()
+    const [ checking, setChecking ] = useState(true)
+    const [ isLoggedIn, setIsLoggedIn ] = useState(false)
 
     useEffect(() => {
-        
         firebase.auth().onAuthStateChanged( async(user) => {
 
             if ( user?.uid ) {
-                dispatch( login( user.uid, user.displayName ) );
+                dispatch( login( user.uid, user.displayName ) )
                 setIsLoggedIn( true );
-                dispatch( startLoadingNotes( user.uid ) );
+                dispatch( startLoadingNotes( user.uid ) )
 
             } else {
-                setIsLoggedIn( false );
+                setIsLoggedIn( false )
             }
-
-            setChecking(false);
-
-        });
+            setChecking(false)
+        })
         
     }, [ dispatch, setChecking, setIsLoggedIn ])
-
 
     if ( checking ) {
         return (
@@ -51,7 +44,6 @@ export const AppRouter = () => {
         )
     }
 
-    
     return (
         <Router>
             <div>
@@ -61,17 +53,13 @@ export const AppRouter = () => {
                         component={ AuthRouter }
                         isAuthenticated={ isLoggedIn }
                     />
-
                     <PrivateRoute 
                         exact
                         isAuthenticated={ isLoggedIn }
                         path="/"
                         component={ AgendaScreen }
                     />
-
                     <Redirect to="/auth/login" />
-
-
                 </Switch>
             </div>
         </Router>

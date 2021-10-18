@@ -1,20 +1,18 @@
-import { db } from '../firebase/firebase-config';
-
-
+import { db } from '../firebase/firebase-config'
 
 export const loadNotes = async ( uid ) => {
 
-    const notesSnap = await db.collection(`${ uid }/agenda/notes`).get();
-    const notes = [];
+    const notesSnap = await db.collection(`${ uid }/agenda/notes`).get()
+    const notes = []
 
     notesSnap.forEach( snapHijo => {
         notes.push({
             id: snapHijo.id,
             ...snapHijo.data()
         })
-    });
+    })
     
-    return notes;
+    return notes
 }
 
 

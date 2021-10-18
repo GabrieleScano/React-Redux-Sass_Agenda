@@ -1,27 +1,27 @@
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert2'
 
-import { firebase, googleAuthProvider } from '../firebase/firebase-config';
-import { types } from '../types/types';
-import { startLoading, finishLoading } from './ui';
-import { noteLogout } from './notes';
+import { firebase, googleAuthProvider } from '../firebase/firebase-config'
+import { types } from '../types/types'
+import { startLoading, finishLoading } from './ui'
+import { noteLogout } from './notes'
 
 
 export const startLoginEmailPassword = (email, password) => {
     return (dispatch) => {
 
-        dispatch( startLoading() );
+        dispatch( startLoading() )
         
         
         firebase.auth().signInWithEmailAndPassword( email, password )
             .then( ({ user }) => {
-                dispatch(login( user.uid, user.displayName ));
+                dispatch(login( user.uid, user.displayName ))
 
-                dispatch( finishLoading() );
+                dispatch( finishLoading() )
             })
             .catch( e => {
-                console.log(e);
-                dispatch( finishLoading() );
-                Swal.fire('Error', e.message, 'error');
+                console.log(e)
+                dispatch(finishLoading())
+                Swal.fire('Error', e.message, 'error')
             })
 
         
@@ -35,15 +35,15 @@ export const startRegisterWithEmailPasswordName = ( email, password, name ) => {
         firebase.auth().createUserWithEmailAndPassword( email, password )
             .then( async({ user }) => {
 
-                await user.updateProfile({ displayName: name });
+                await user.updateProfile({ displayName: name })
 
                 dispatch(
                     login( user.uid, user.displayName )
                 );
             })
             .catch( e => {
-                console.log(e);
-                Swal.fire('Error', e.message, 'error');
+                console.log(e)
+                Swal.fire('Error', e.message, 'error')
             })
 
     }
@@ -59,7 +59,7 @@ export const startGoogleLogin = () => {
                 dispatch(
                     login( user.uid, user.displayName )
                 )
-            });
+            })
 
     }
 }
@@ -71,15 +71,15 @@ export const login = (uid, displayName) => ({
         uid,
         displayName
     }
-});
+})
 
 
 export const startLogout = () => {
     return async( dispatch ) => {
-        await firebase.auth().signOut();
+        await firebase.auth().signOut()
 
         dispatch( logout() );
-        dispatch( noteLogout() );
+        dispatch( noteLogout() )
     }
 }
 
