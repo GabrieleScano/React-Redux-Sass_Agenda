@@ -73,13 +73,10 @@
 }
 
 .auth__alert-error {
-    background-color: red;
-    border-radius: 5px;
-    color: white;
+    color: #f7797d;
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
-    padding: 5px
+    padding: 2px
 }
 
 .auth__title_container {

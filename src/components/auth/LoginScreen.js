@@ -58,6 +58,7 @@ export const LoginScreen = () => {
                     className="auth__input"
                     value={ password }
                     onChange={ handleInputChange }
+                    autoComplete="off"
                 />
 
 
