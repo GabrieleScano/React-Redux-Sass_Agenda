@@ -1,6 +1,7 @@
 # Notes app created with React
 
 Personal agenda fully responsive remote first 
+
 TRY the [DEMO](https://pacific-woodland-29887.herokuapp.com/auth/login)
 
 State management: Redux
@@ -12,6 +13,7 @@ Style: SASS
 Service and dataBase: Firebase with Firestone
 
 Deploy: Heroku 
+
 Heroku puts the app to sleep after 30 minutes of inactivity. This is what makes the app slow to load. When your app's dyno is asleep, waking it up may take some time. But after the first load, it starts loading pretty fast!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
